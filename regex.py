@@ -1,6 +1,6 @@
 import re
 
-with open("text for 1-7.txt") as f:
+with open("text.txt") as f:
     data = f.read()
 
 #1
@@ -30,3 +30,18 @@ print(task6)
 #7
 task7 = re.sub('_', '', data)
 print(task7)
+
+#8
+data = "HelloWorldMyNameIsAruzhan"
+task8 = re.findall(r'[A-Z][^A-Z]*', data)
+print(task8)
+
+#9
+data = "HelloWorldMyNameIsAruzhan"
+task9 = re.sub(r'(\w)([A-Z])', r'\1 \2', data)
+print(task9)
+
+#10
+data = "HelloWorldMyNameIsAruzhan"
+task10 = re.sub(r'(\w)([A-Z])', r'\1_\2', data)
+print(task10)
